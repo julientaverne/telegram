@@ -10,6 +10,10 @@ app.use(
 	})
 ) // for parsing application/x-www-form-urlencoded
 
+app.get("/", function(req, res) {
+    console.log("julien");
+})
+
 //This is the route the API will call
 app.post("/new-message", function(req, res) {
 	const { message } = req.body
