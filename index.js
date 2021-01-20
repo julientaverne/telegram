@@ -3,7 +3,7 @@ var express = require("express")
 var app = express()
 var bodyParser = require("body-parser")
 const axios = require("axios")
-const JsonFind = require('json-find');
+//const JsonFind = require('json-find');
 
 app.use(bodyParser.json()) // for parsing application/json
 app.use(
@@ -19,10 +19,10 @@ app.get("/", function(req, res) {
 //This is the route the API will call
 app.post("/www", function(req, res) {
 	const { message } = req.body
-        const doc = JsonFind(req);    
-        const channel_post = doc.findValues('channel_post');
+        const doc = req.channel_post;    
+//        const channel_post = doc.findValues('channel_post');
 	console.log("+++++++++++++++++++++++message:",message);
-        console.log("-----------------------channel_post:",channel_post);
+        console.log("-----------------------doc:",doc);
 
 /*
 let update = JSON.parse(req['postData']['contents']);
