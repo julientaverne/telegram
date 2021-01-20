@@ -20,7 +20,7 @@ app.post("/www", function(req, res) {
 	const { message } = req.body
 
 
-let update = JSON.parse(request['postData']['contents']);
+let update = JSON.parse(req['postData']['contents']);
           
     // Make sure this is update is a type message
     if (update.hasOwnProperty('inline_query')) {
