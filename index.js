@@ -19,7 +19,7 @@ app.get("/", function(req, res) {
 app.post("/www", function(req, res) {
 	const { message } = req.body
         const update = req;    
-	console.log("message:",message");
+	console.log("message:",message);
 
 /*
 let update = JSON.parse(req['postData']['contents']);
