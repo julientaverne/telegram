@@ -19,8 +19,8 @@ app.get("/", function(req, res) {
 app.post("/www", function(req, res) {
 	const { message } = req.body
         const update = req;    
-	console.log("message:",message);
-        console.log("update:",update);
+	console.log("+++++++++++++++++++++++message:",message);
+        console.log("-----------------------update:",update);
 
 /*
 let update = JSON.parse(req['postData']['contents']);
@@ -63,7 +63,7 @@ let update = JSON.parse(req['postData']['contents']);
 			"https://api.telegram.org/bot1544386242:AAGn7SBWQGrUn45hk2nJMwV6bhxToMpCI_A/sendMessage",
 			{
 				chat_id: message.chat.id,
-				text: "Polo!! v4,update:"+update+"",
+				text: "Polo!! v5,update:"+update+"",
 			}
 		)
 		.then((response) => {
