@@ -19,7 +19,7 @@ app.get("/", function(req, res) {
 //This is the route the API will call
 app.post("/www", function(req, res) {
 	const { message } = req.body
-        const doc = req.channel_post;    
+        const doc = req;    
 //        const channel_post = doc.findValues('channel_post');
 	console.log("+++++++++++++++++++++++message:",message);
         console.log("-----------------------doc:",doc);
