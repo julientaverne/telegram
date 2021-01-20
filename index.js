@@ -16,7 +16,7 @@ app.get("/", function(req, res) {
 })
 
 //This is the route the API will call
-app.post("/new-message", function(req, res) {
+app.post("/www", function(req, res) {
 	const { message } = req.body
 
 	//Each message contains "text" and a "chat" object, which has an "id" which is the chat id
@@ -34,7 +34,7 @@ app.post("/new-message", function(req, res) {
 			"https://api.telegram.org/bot1544386242:AAGn7SBWQGrUn45hk2nJMwV6bhxToMpCI_A/sendMessage",
 			{
 				chat_id: message.chat.id,
-				text: "Polo!! v2",
+				text: "Polo!! v3",
 			}
 		)
 		.then((response) => {
