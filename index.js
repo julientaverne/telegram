@@ -18,8 +18,8 @@ app.get("/", function(req, res) {
 //This is the route the API will call
 app.post("/www", function(req, res) {
 	const { message } = req.body
-
-
+        const update = req;    
+/*
 let update = JSON.parse(req['postData']['contents']);
           
     // Make sure this is update is a type message
@@ -42,11 +42,12 @@ let update = JSON.parse(req['postData']['contents']);
         }
       }
     }
+*/
 
-
+/*
 	//Each message contains "text" and a "chat" object, which has an "id" which is the chat id
 
-/*	if (!message || message.text.toLowerCase().indexOf("marco") < 0) {
+	if (!message || message.text.toLowerCase().indexOf("marco") < 0) {
 		// In case a message is not present, or if our message does not have the word marco in it, do nothing and return an empty response
 		return res.end()
 	}
@@ -59,7 +60,7 @@ let update = JSON.parse(req['postData']['contents']);
 			"https://api.telegram.org/bot1544386242:AAGn7SBWQGrUn45hk2nJMwV6bhxToMpCI_A/sendMessage",
 			{
 				chat_id: message.chat.id,
-				text: "Polo!! v4,update:"+update+"|inlineQuery:"+inlineQuery+"|msg:"+msg,
+				text: "Polo!! v4,update:"+update+"",
 			}
 		)
 		.then((response) => {
